@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treća vježba</title>
+  <style>
+    h1 {
+      color: rgb(188, 97, 128);
+      font-weight: bolder;
+      font-size: 30px;
+      text-shadow: -1px -1px -0 #ffffff;
+      text-shadow: 2px 2px #ffffff;
+
+    }
+
+    p{
+      display: inline-block;
+      font-size: 19px;
+    }
+
+    body {
+      background-color: rgb(251, 235, 238);
+      margin-left: 20px;
+      margin-bottom: 40px;
+    }
+    form {
+      display: inline-block;
+    }
+    fieldset {
+      background-color: rgb(253, 214, 221);
+      border-style: dotted;
+      border-color: palevioletred;
+      border-width: 4px;
+      font-weight: bolder;
+      color: rgb(188, 97, 128);
+      text-shadow: -1px -1px -0 #ffffff;
+      font-size: 25px;;
+      padding-top: 20px;
+      padding-right: 50px;
+    }
+
+    legend {
+      font-size: 30px;
+    }
+
+    input {
+      display: inline-block;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .inputupis {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-right: 120px;
+    }
+
+    .divspol {
+      display: inline-block;
+    }
+
+    .selectop, select {
+      color: rgb(96,96,96);
+      padding: 7px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: inline-block;
+    }
+
+    input[type="text"]:hover {
+      cursor: pointer;
+    }
+
+    input[type="radio"]:hover {
+      cursor: pointer;
+    }
+
+    input[type="radio"]:focus {
+      box-shadow: 5px 5px 10px rgba(188, 97, 128,1);
+    }
+
+    input[type="text"]:focus{
+      border: solid;
+      border-color: palevioletred;
+      box-shadow: 5px 5px 10px rgba(188, 97, 128,1);
+    }
+
+
+    button[type="submit"] {
+      background-color: rgb(188, 97, 128);
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+      font-size: 25px;
+      font-weight: bolder;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    button[type="submit"]:active {
+      background-color: white;
+      border: solid;
+      border-color: rgb(188, 97, 128);
+      color: rgb(188, 97, 128);
+    }
+
+    button[type="submit"]:hover {
+      cursor: pointer;
+    }
+
+    .gumbnazad {
+      font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+      border: solid;
+      display: block;
+      margin-top: 10px;
+      background-color: white;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(96,96,96,0.5);
+    }
+
+    .gumbnazad:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<h1>MEDIJSKA PISMENOST KOD STUDENATA</h1>
+<form action="trecavjezba2.html" target="_self" autocomplete="on">
+<fieldset>
+  <legend>Osobne informacije</legend>
+  <label for="imeiprezime">Ime i prezime:</label>
+  <input class="inputupis" type="text" id="imeiprezime" name="imeiprezime" placeholder="Upiši...">
+  <br> 
+  <label for="godine">Uzrast:</label>
+  <input class="inputupis" name="godine" list="uzrast" placeholder="Odaberi iz liste">
+  <datalist id="uzrast">
+    <option value="18-22">18-22</option>
+    <option value="23-25">23-25</option>
+    <option value="25-30">25-30</option>
+    <option value="30+">30+</option>
+  </datalist>
+  <br> 
+  <label style="display: inline-block;" for="spol">Spol:</label>
+  <div class="divspol">
+  <input style="display: inline-block;" type="radio" id="žspol" name="spol"> 
+  <label for="žspol">Ž</label>
+  <input style="display: inline-block;" type="radio" id="mspol" name="spol">
+  <label for="mspol">M</label>
+  </div>
+  <br>
+  <label for="studije">Studiram:</label>
+  
+  <select name="studije" id="studije">
+    <option class="selectop" value="odaberi">Odaberi</option>
+    <option class="selectop" value="društvene">Društvene znanosti</option>
+    <option class="selectop" value="stem">STEM znanosti</option>
+    <option class="selectop" value="umjetnost">Umjetnost</option>
+  </select>
+</fieldset>
+<br>
+<fieldset>
+  <legend>Molimo na sva pitanja odgovorite iskreno</legend>
+  <label for="prvopitanje">Koliko često pratite vesti putem različitih medija?</label>
+  <br>
+  <br>
+  <div>
+  <input type="radio" name="prvopitanje" id="a">
+  <label for="prvopitanje">Svakodnevno</label>
+  <br>
+  <input type="radio" name="prvopitanje" id="b">
+  <label for="prvopitanje"> Nekoliko puta tjedno</label>
+  <br>
+  <input type="radio" name="prvopitanje" id="c">
+  <label for="prvotitanje">Rijetko</label>
+  <br>
+  <input type="radio" name="prvopitanje" id="d">
+  <label for="prvopitanje">Nikada</label>
+  </div>
+  <br>
+  <div>
+  <label for="drugopitanje">Koji mediji su Vam glavni izvor informacija?</label>
+  <br><br>
+  <input type="checkbox" name="drugopitanje" id="a">
+  <label for="drugopitanje">Televizija</label>
+  <br>
+  <input type="checkbox" name="drugopitanje" id="b">
+  <label for="drugopitanje">Internet portali</label>
+  <br>
+  <input type="checkbox" name="drugopitanje" id="c">
+  <label for="drugopitanje">Društvene mreže</label>
+  <br>
+  <input type="checkbox" name="drugopitanje" id="c">
+  <label for="drugopitanje">Radio</label>
+  <br>
+  <input type="checkbox" name="drugopitanje" id="d">
+  <label for="drugopitanje">Novine</label>
+  <br>
+  <input type="checkbox" name="drugopitanje" id="e">
+  <label for="drugopitanje">Drugo</label>
+  <input style="width: 400px;" placeholder="Navedite šta" type="text" name="drugopitanje" id="e">
+  </div>
+  <br>
+  <div>
+  <label for="trećepitanje">Provjeravate li točnost informacija prije nego što ih podijelite sa drugima?</label>
+  <br><br>
+  <input type="radio" name="trećepitanje" id="a">
+  <label for="trećepitanje">Uvijek</label>
+  <br>
+  <input type="radio" name="trećepitanje" id="b">
+  <label for="trećepitanje">Ponekad</label>
+  <br>
+  <input type="radio" name="trećepitanje" id="c">
+  <label for="trećepitanje">Rijetko</label>
+  <br>
+  <input type="radio" name="trećepitanje" id="d">
+  <label for="trećepitanje">Nikada</label>
+  </div>
+  <br>
+  <div>
+  <label for="četvrtopitanje">Koliko ste sigurni u svoju sposobnost da prepoznate lažne vijesti</label>
+  <br><br>
+  <input type="radio" name="četvrtopitanje" id="a">
+  <label for="četvrtopitanje">Vrlo siguran/sigurna</label>
+  <br>
+  <input type="radio" name="četvrtopitanje" id="b">
+  <label for="četvrtopitanje">Dosta siguran/sigurna</label>
+  <br>
+  <input type="radio" name="četvrtopitanje" id="c">
+  <label for="četvrtopitanje">Malo siguran/sigurna</label>
+  <br>
+  <input type="radio" name="četvrtopitanje" id="d">
+  <label for="četvrtopitanje">Nimalo siguran/sigurna</label>
+  </div>
+  <br>
+  <div>
+  <label for="petopitanje">Jeste li ikada bili obmanuti dezinformacijom koju ste smatrali istinitom?</label>
+  <br><br>
+  <input type="radio" name="petopitanje" id="a">
+  <label for="petopitanje">Da</label>
+  <br>
+  <input type="radio" name="petopitanje" id="b">
+  <label for="petopitanje">Ne</label>
+  <br>
+  <input type="radio" name="petopitanje" id="c">
+  <label for="petopitanje">Nisam siguran/sigurna</label>
+  </div>
+  <br>
+  <div>
+  <label for="šestopitanje">Kako biste ocijenili svoju veštinu kritičkog analiziranja medijskih sadržaja?</label>
+  <br><br>
+  <input type="radio" name="šestopitanje" id="a">
+  <label for="šestopitanje">Odlična</label>
+  <br>
+  <input type="radio" name="šestopitanje" id="b">
+  <label for="šestopitanje">Dobra</label>
+  <br>
+  <input type="radio" name="šestopitanje" id="c">
+  <label for="šestopitanje">Osrednja</label>
+  <br>
+  <input type="radio" name="šestopitanje" id="d">
+  <label for="šestopitanje">Loša</label>
+  </div>
+  <br>
+  <div>
+  <label for="sedmopitanje">Koliko često se oslanjate na komentare i mišljenja drugih korisnika na društvenim mrežama prilikom formiranja stava o nekoj temi?</label>
+  <br><br>
+  <input type="radio" name="sedmopitanje" id="a">
+  <label for="sedmopitanje">Veoma često</label>
+  <br>
+  <input type="radio" name="sedmopitanje" id="b">
+  <label for="sedmopitanje">Ponekad</label>
+  <br>
+  <input type="radio" name="sedmopitanje" id="c">
+  <label for="sedmopitanje">Rijetko</label>
+  <br>
+  <input type="radio" name="sedmopitanje" id="d">
+  <label for="sedmopitanje">Nikada</label>
+  </div>
+  <br>
+  <div>
+  <label for="osmopitanje">Jeste li učestvovali u nekoj edukaciji ili radionici o medijskoj pismenosti?</label>
+  <br><br>
+  <input type="radio" name="osmopitanje" id="a">
+  <label for="osmopitanje">Da</label>
+  <br>
+  <input type="radio" name="osmopitanje" id="a">
+  <label for="osmopitanje">Ne</label>
+  </div>
+  </fieldset>
+  <br>
+  <fieldset>
+  <legend>Recite nam više</legend>
+
+  <label for="devetopitanje">Koje mjere preduzimate kako biste se zaštitili od dezinformacija na internetu?</label>
+  <br>
+  <input type="text" name="desetopitanje">
+  <br><br>
+  <label for="desetopitanje">Šta mislite, koliko su studenti generalno sposobni da prepoznaju lažne vijesti i dezinformacije?</label>
+  <br>
+  <input type="text" name="desetopitanje" id="">
+  <br><br>
+  <label for="11pitanje">Šta za vas znači biti medijski pismen?</label>
+  <br>
+  <input type="text" name="11pitanje" id="">
+  <br><br>
+  <label for="12pitanje">Kako biste opisali važnost medijske pismenosti za društvo?</label>
+  <br>
+  <input type="text" name="12pitanje" id="">
+  </fieldset>
+  <br>
+  <button type="submit">Predaj</button>
+ </form>
+ <br><br>
+ <a href="index.html" style="text-decoration: none;">
+ <button class="gumbnazad">
+  &#60;
+</button>
+</a>
+</body>
+</html>
