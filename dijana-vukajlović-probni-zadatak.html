@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pripremni zadatak za prvi kolokvij - MK1</title>
+  <style>
+    body {
+      margin: 50px;
+      font-family: Arial;
+    }
+
+    .tablica1 {
+      width: 700px;
+      border-style: dashed;
+      border-width: 4px;
+      border-color: black;
+      border-radius: 10px;
+      background-color: rgba(177, 177, 255, 0.8);
+      border-collapse: separate;
+    }
+
+    td{
+      border: 1px;
+      border: solid;
+      border-color: black;
+      margin: 4px;
+      padding: 0px;
+    }
+
+    .lista {
+      font-weight: bold;
+      font-size: 14px;
+      color: black;
+    }
+
+    li {
+      margin: 4px;
+      padding: 10px;
+      width: 100px;
+      background-color: rgba(232, 138, 255, 0.9);
+    }
+
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    h1 {
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    form {
+      width: 700px;
+      background-color: white;
+      border-style: dashed;
+      border-width: 2px;
+      border-radius: 10px;
+      border-color: black;
+      padding: 20px;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=date],
+    input[type=url],
+    input[type=email],
+    input[type=color],
+    .datalista {
+      background-color: hsla(60, 100%, 78%, 0.9);
+      width: 665px;
+      margin: 10px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    
+    input[type="text"]:active,
+    input[type="password"]:active,
+    input[type="date"]:active,
+    input[type="url"]:active,
+    input[type="email"]:active,
+    input[type="color"]:active {
+      background-color: rgba(255, 255, 143, 0.8);
+    }
+
+    label{
+      margin: 10px;
+      font-weight: bold;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: 50px;
+      height: 25px;
+      margin-left: 80px;
+    }
+
+    fieldset {
+      width: 50%;
+      font-size: 25px;
+      margin: 15px;
+      border-radius: 50px;
+      border-top-left-radius: 0px;
+      background-color: hsla(60, 100%, 78%, 0.9);
+      border-width: 4px;
+    }
+
+    button {
+      width: 100px;
+      margin-left: 110px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px gray;
+      padding: 10px;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    button:active {
+      box-shadow: none;
+    }
+
+    .tablica2 {
+      width: 100%;
+      height: 400px;
+      background-color: white;
+      border-style: dashed;
+      border-radius: 200px;
+      border-bottom-left-radius: 0px;
+      overflow: hidden;
+    }
+
+    .tablica2 td{
+      width: 25%;
+    }               
+
+    #zutacelija{
+      background-color: hsla(60, 95%, 53%, 0.5);
+      border-top-left-radius: 200px;
+    }
+
+    #plavacelija {
+      background-color: rgba(16, 16, 255, 0.5);
+    }
+    
+    #zelenacelija {
+      background-color: rgba(0, 128, 0, 0.5);
+    }
+
+    p{
+      font-style: italic;
+      text-align: justify;
+      width: 95%;
+      padding: 10px;
+    }
+
+    .gumbnazad {
+      font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+      border: solid;
+      display: block;
+      margin-top: 10px;
+      background-color: white;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(96,96,96,0.5);
+    }
+  </style>
+</head>
+<body>
+  <table class="tablica1">
+    <tr>
+    <td>
+    <ol type="A" class="lista">
+      <li><a href="#forma">FORMA</a></li>
+      <li><a href="#tablicadva">TABLICA</a></li>
+      <li><a href="#paragraf">PARAGRAF</a></li>
+      <li><a href="https://www.grf.unizg.hr/" target="_blank">GRF</a></li>
+    </ol>
+    </td>
+    </tr>
+  <tr><td><h1 id="forma">FORMA</h1></td></tr>
+  <tr>
+    <td>
+    <form action="/submit" method="POST" autocomplete="on" id="zadatakforma">
+      <label for="unos1">Ime:</label><br>
+      <input type="text" id="unos1" required autofocus>
+      <br>
+      <label for="unos2">Pin:</label><br>
+      <input type="password" maxlength="4" id="unos2" required>
+      <br>
+      <label for="unos3">Datum rođenja?</label><br>
+      <input type="date" id="unos3">
+      <br>
+      <label for="unos4">E-mail:</label><br>
+      <input placeholder="ime@domena.com" type="email" required>
+      <br>
+      <label for="unos5">Web adresa:</label><br>
+      <input placeholder="http://www.site.com" type="url" required>
+      <br>
+      <label for="unos6">Kolokvij:</label><br>
+      <fieldset>
+      <input type="radio" name="unos6" id="6k1">
+      <label for="unos6" id="6k1">K1</label><br>
+      <input type="radio" name="unos6" id="6k2">
+      <label for="unos6" id="6k2">K2</label><br>
+      <input type="radio" name="unos6" id="6k3">
+      <label for="unos6" id="6k3">K3</label>
+      </fieldset>
+      <br>
+      <label for="unos7">Gradivo:</label><br>
+      <fieldset>
+      <input type="checkbox" name="unos7" id="7tablice">
+      <label for="unos7" id="7tablice">Tablice</label><br>
+      <input type="checkbox" name="unos7" id="7forme">
+      <label for="unos7" id="7forme">Forme</label><br>
+      <input type="checkbox" name="unos7" id="7animacija">
+      <label for="unos7" id="7animacija">Animacija</label><br>
+      <input type="checkbox" name="unos7" id="7video">
+      <label for="unos7" id="7video">Video</label>
+      </fieldset>
+      <br>
+      <label for="unos8" list="datalista">Koju ocjenu očekujute?</label><br>
+      <input class="datalista" name="unos8" list="lista" placeholder="Odaberi iz liste">
+      <datalist id="lista">
+        <option value="Odličan">Odličan</option>
+        <option value="Vrlo dobar">Vrlo dobar</option>
+        <option value="Dobar">Dobar</option>
+        <option value="Dovoljan">Dovoljan</option>
+        <option value="Nedovoljan">Nedovoljan</option>
+      </datalist>
+      <br>
+      <label for="unos9">Odaberite boju:</label><br>
+      <input type="color" name="unos9">
+      <br>
+      <button type="reset">
+        Poništi
+      </button>
+      <button type="submit">
+        Prihvati
+      </button>
+      <script lang="javascript">
+        const form = document.getElementById('zadatakforma');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          window.location.reload();
+      });
+      </script>
+    </form>
+  </td>
+  </tr>
+  <tr>
+    <td>
+      <h1 id="tablicadva">TABLICA 2</h1>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table class="tablica2">
+        <tr>
+          <td rowspan="2" colspan="2" id="zutacelija"></td>
+          <td id="plavacelija" rowspan="4"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td id="zelenacelija" rowspan="2"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="1"></td>
+          <td></td>
+        </tr>
+      </table>      
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <i><h1 id="paragraf">PARAGRAF</h1></i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        HTML (HyperText Markup Language) i CSS (Cascading Style Sheets) su dva ključna elementa koja čine temelje moderne web stranice, 
+        a njihov nastanak usko je povezan s razvojem World Wide Weba. HTML je izumio Tim Berners-Lee 1989. godine dok je radio u CERN-u. 
+        Prvobitna ideja bila je stvoriti način za povezivanje dokumenata putem hiperteksta, što je omogućilo korisnicima da "putuju" između 
+        stranica klikom na linkove. HTML je omogućio strukturiranje sadržaja na webu, koristeći oznake (tagove) za označavanje elemenata kao što su 
+        naslovi, odlomci, slike i poveznice. CSS je, s druge strane, nastao kao odgovor na potrebu za odvojenim stiliziranjem web stranica, jer HTML 
+        nije bio dizajniran za upravljanje izgledom i dizajnom stranica. CSS je predstavljen 1996. godine od strane Håkon Wium Lie-a, dok je radio na 
+        projektu World Wide Web Consortium (W3C). CSS omogućava web dizajnerima da definiraju izgled stranica (boje, fontove, raspored, itd.) ne 
+        mijenjajući osnovnu strukturu HTML dokumenta. Ovaj odvojeni pristup ubrzo je postao standard, jer je omogućio fleksibilnost, lakšu promjenu 
+        dizajna i bolju optimizaciju za različite uređaje. Zajedno, HTML i CSS omogućuju izradu funkcionalnih i vizualno privlačnih web stranica,
+         a njihov razvoj i usklađivanje s novim tehnologijama stalno traje, omogućujući još sofisticiranije i dinamičnije web aplikacije.
+      </p>
+    </td>
+  </tr>
+  </table>
+  <a style="text-decoration: none;" href="index.html">
+    <button class="gumbnazad">
+      &#60;
+  </button>
+  </a>
+</body>
+</html>

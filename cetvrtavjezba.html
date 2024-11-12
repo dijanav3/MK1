@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablica Temperature i Padavina</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(255, 255, 246);
+    }
+
+    .divnaslov {
+      display: block;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      text-align:center;
+    }
+
+    table {
+      width: 80%;
+      height: 400px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+
+    thead tr {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .padavine {
+      color: black;
+      background-color: #e3f2fd;
+    }
+
+    #temp {
+      color: lightskyblue;
+      text-shadow: 1px 1px 0px #000000;
+      font-weight: bold;
+      background-color: #fff3cd;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    th:first-child, td:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    th:last-child, td:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .gumbnazad {
+      font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+      border: solid;
+      display: block;
+      margin-top: 10px;
+      background-color: white;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(96,96,96,0.5);
+    }
+
+  </style>
+</head>
+<body>
+<div class="divnaslov">
+<h2>TEMPERATURE I PADAVINE PO GODIŠNJIM DOBIMA</h2>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Godina</th>
+      <th colspan="2">Proljeće</th>
+      <th colspan="2">Ljeto</th>
+      <th colspan="2">Jesen</th>
+      <th colspan="2">Zima</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th class="padavine">Padavine</th>
+      <th id="temp">Temperatura</th>
+      <th class="padavine">Padavine</th>
+      <th id="temp">Temperatura</th>
+      <th class="padavine">Padavine</th>
+      <th id="temp">Temperatura</th>
+      <th class="padavine">Padavine</th>
+      <th id="temp">Temperatura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2022</td>
+      <td class="padavine">120 mm</td>
+      <td>15°C</td>
+      <td class="padavine">80 mm</td>
+      <td>25°C</td>
+      <td class="padavine">140 mm</td>
+      <td>10°C</td>
+      <td class="padavine">60 mm</td>
+      <td>-2°C</td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td class="padavine">115 mm</td>
+      <td>16°C</td>
+      <td class="padavine">75 mm</td>
+      <td>26°C</td>
+      <td class="padavine">130 mm</td>
+      <td>11°C</td>
+      <td class="padavine">55 mm</td>
+      <td>-1°C</td>
+    </tr>
+  </tbody>
+</table>
+<a style="text-decoration: none;" href="index.html">
+  <button class="gumbnazad">
+    &#60;
+</button>
+</a>
+</body>
+</html>
