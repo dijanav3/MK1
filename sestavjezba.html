@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Šesta vježba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      font-family: 'Source Code Pro';
+    }
+
+    .sadrzaj {
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      font-size: 35px;
+    }
+
+    p {
+      color: white;
+      font-size: 20px;
+    }
+
+    iframe {
+      border: none;
+    }
+
+    object{
+      width: 666px;
+      height: 482px;
+    }
+    @media (max-width: 768px) {
+    img, iframe,object {
+        max-width: 90%; 
+        margin-bottom: 15px;
+    }
+
+    body {
+        padding: 10px; 
+    }
+    }
+    @media (max-width: 480px) {
+    img, iframe {
+        max-width: 100%; 
+    }
+
+    body {
+        padding: 5px;
+    }
+    }
+    button{
+    font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+      border: solid;
+      display: block;
+      margin-top: 10px;
+      background-color: white;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(96,96,96,0.5);}
+
+      button:hover {
+        cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    alert("Interakcija sa slikom moguća je samo na računarskim monitorima kada je prozor preglednika uvećan na ceo ekran!")
+  </script>
+  <div class="sadrzaj">
+    <h1>
+      Šta se dešava sledeće?
+    </h1>
+    <p>
+      Okini i saznaj! <br>
+      <sub><p>(za povratak na početnu stranicu pritisni sidro)</p></sub><br>
+    </p>
+    <img src="1230822.jpg" usemap="#strip" alt="">
+    <map name="strip">
+      <area shape="rect" coords="469, 256, 572, 342" href="123083.jpg" alt="" target="prikaz">
+      <area shape="rect" coords="32, 154, 82, 198" href="index.html" alt="">
+    </map><br>
+    <iframe height="482px" width="666px" scrolling="no" name="prikaz"></iframe> <br>
+    <h1>Još zanimljivog sadržaja:</h1>
+    <object data="https://www.youtube.com/v/PO8gWoCj29I?version=3&autohide=1" type="application/x-shockwave-flash">
+      <param name="movie" value="https://www.youtube.com/v/PO8gWoCj29I?version=3&autohide=1">
+      <param name="allowFullScreen" value="true">
+  </object><br>
+  <iframe src="https://blackandwhitecomic.com/" scrolling="no" width="666px" height="200px" frameborder="0"></iframe>
+  </div>
+  <a href="index.html" style="text-decoration: none;">
+    <button>
+     &#60;
+   </button>
+   </a>
+</body>
+</html>
