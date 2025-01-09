@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osma vježba</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+    body {
+      margin-left: 200px;
+      margin-right: 200px;
+      background-color: rgb(235, 246, 255);
+      font-family: "Jersey 10";
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+      text-shadow: 2px 2px 10px black;
+      display: inline-block;
+    }
+    .gumb {
+      margin: 20px;
+      padding: 10px;
+      font-size: 50px;
+      font-family: "Jersey 10";
+      color: white;
+      background-color: rgb(135, 183, 226);
+      border: none;
+      border-radius: 12px;
+      transition: transform 2s ease, width 2s ease;
+      width: 150px;
+    }
+
+    .gumb:hover {
+      transform: scaleX(2);
+      width: 300px;
+      cursor: pointer;
+    }
+
+    .gumb:active {
+      box-shadow: 2px 2px 10px rgb(94, 84, 84);
+    }
+
+    input {
+      margin-top: 20px;
+      border: solid;
+      border-color: rgb(135, 183, 226);
+      border-radius: 12px;
+      width: 130px;
+      padding: 10px;
+      transition: transform 2s ease, width 2s ease;
+    }
+
+    input:hover {
+      transform: scaleX(1);
+      width: 300px;
+    }
+
+    input:active {
+      box-shadow: 2px 2px 10px rgb(94, 84, 84);
+    }
+
+    input:focus {
+      background-color: rgb(135, 183, 226);
+      border: none;
+    }
+    .kontejner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #nazad {
+      font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+      border: solid;
+      border-color: rgb(108, 161, 207);
+      color: rgb(108, 161, 207);
+      display: block;
+      background-color: white;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
+    }
+
+    #nazad:hover {
+      cursor: pointer;
+    }
+
+    #nazad:active {
+    box-shadow: 0px 0px 5px rgba(96,96,96,0.5);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Odaberi omiljenu životinju</h1>
+  <div class="kontejner">
+    <button class="gumb">
+      Mačka
+    </button> <br>
+    <button class="gumb">
+      Pas
+    </button>
+    <br>
+    <button class="gumb">
+      Hrčak
+    </button>
+    <br>
+    <button class="gumb">
+      Konj
+    </button> <br>
+    <input type="text" placeholder="Druga (upiši i potvrdi)"> <br>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const unos = document.querySelector("input");
+      const kontejner = document.querySelector(".kontejner");
+
+      unos.addEventListener("keydown", (dogadaj) => {
+        console.log("Pritisnuta tipka:", dogadaj.key); // Za debugiranje
+        if (dogadaj.key === "Enter" && unos.value.trim() !== "") {
+          const noviGumb = document.createElement("button");
+          noviGumb.textContent = unos.value;
+
+          noviGumb.style.margin = "20px";
+          noviGumb.style.padding = "10px";
+          noviGumb.style.fontSize = "50px";
+          noviGumb.style.fontFamily = "'Jersey 10'";
+          noviGumb.style.color = "white";
+          noviGumb.style.backgroundColor = "rgb(135, 183, 226)";
+          noviGumb.style.border = "none";
+          noviGumb.style.borderRadius = "12px";
+          noviGumb.style.transition = "transform 2s ease, width 2s ease";
+          noviGumb.style.width = "150px";
+
+          noviGumb.addEventListener("mouseover", () => {
+            noviGumb.style.transform = "scaleX(2)";
+            noviGumb.style.width = "300px";
+          });
+
+          noviGumb.addEventListener("mouseout", () => {
+            noviGumb.style.transform = "scaleX(1)";
+            noviGumb.style.width = "150px";
+          });
+
+          noviGumb.addEventListener("mousedown", () => {
+            noviGumb.style.boxShadow = "2px 2px 10px rgb(94, 84, 84)";
+          });
+
+          noviGumb.addEventListener("mouseup", () => {
+            noviGumb.style.boxShadow = "none";
+          });
+
+          kontejner.insertBefore(noviGumb, unos);
+          unos.value = "";
+        }
+      });
+    });
+  </script>
+    <a href="index.html" style="text-decoration: none;">
+      <button id="nazad">
+        &#60;
+    </button>
+    </a>
+</body>
+</html>
