@@ -125,7 +125,7 @@
       const kontejner = document.querySelector(".kontejner");
 
       unos.addEventListener("keydown", (dogadaj) => {
-        console.log("Pritisnuta tipka:", dogadaj.key); // Za debugiranje
+        console.log("Pritisnuta tipka:", dogadaj.key); 
         if (dogadaj.key === "Enter" && unos.value.trim() !== "") {
           const noviGumb = document.createElement("button");
           noviGumb.textContent = unos.value;
