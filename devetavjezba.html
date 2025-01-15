@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deveta vježba</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: "Playfair Display", serif;
+            color: white;
+        }
+
+        .glavnidiv {
+            text-align: center;
+            font-family: "Playfair Display";
+            color: white;
+            border: solid 2px black;
+            padding: 20px;
+            background: linear-gradient(45deg, black, white);
+            background-size: 200% 200%;
+            animation: gradientShift 6s infinite ease-in-out;
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        h1, h3 {
+            font-family: "Playfair Display";
+            text-align: center;
+            color: #ffffff;
+            animation: slideDown 2s ease-in-out;
+            margin: 10px 0;
+        }
+
+        .glavnidiv > p:first-of-type {
+            color: #797171;
+            font-weight: bold;
+        }
+
+        .glavnidiv > p:nth-child(odd) {
+            color: #1e1e1f;
+        }
+
+        .glavnidiv > p:last-of-type {
+            font-style: italic;
+            color: #4e1212;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        button{
+          font-family: arial;
+          font-weight: bold;
+          font-size: 20px;
+          border: solid;
+          display: block;
+          margin-top: 10px;
+          background-color: white;
+          text-decoration: none;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 5px rgba(96,96,96,0.5);
+        }
+
+        button:hover {
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <a href="index.html" style="text-decoration: none;">
+    <button>
+     &#60;
+   </button>
+   </a>
+    <h1><i>Derviš i smrt</i></h1>
+    <h3>Meša Selimović</h3>
+    <div class="glavnidiv">
+        <p>
+            <i>Bismilahir-rahmanir-rahim!</i>
+        </p>
+        <p>
+            Pozivam za svjedoka mastionicu i pero i ono što se perom piše.
+        </p>
+        <p>
+            Pozivam za svjedoka nesigurnu tamu sumraka i noć i sve što ona oživi. 
+        </p>
+        <p>
+            Pozivam za svjedoka sudnji dan i dušu što sama sebe kori.
+        </p>
+        <p>
+            Pozivam za svjedoka vrijeme, početak i svršetak svega - da je svaki čovjek uvijek na gubitku.
+        </p>
+    </div>
+    <br>
+    <div class="glavnidiv">
+        <p>
+            Počinjem ovu svoju priču, ni za što, bez koristi za sebe i za druge, iz potrebe koja je jača od 
+            koristi i razuma, da ostane zapis moj o meni, zapisana muka razgovora sa sobom, s dalekom 
+            nadom da će se naći neko rješenje kad bude račun sveden, ako bude, kad ostavim trag mastila 
+            na ovoj hartiji što čeka kao izazov.
+        </p>
+        <p>
+            Ne znam što će biti zabilježeno, ali će u kukama slova 
+            ostati nešto od onoga što je bivalo u meni, pa se više neće gubiti u kovitlacima magle, kao da 
+            nije ni bilo, ili da ne znam što je bilo.
+        </p>
+        <p>
+            Tako ću moći da vidim sebe kakav postajem, to čudo 
+            koje ne poznajem, a čini mi se da je čudo što uvijek nisam bio ono što sam sad.
+        </p>
+        <p>
+            Svjestan sam 
+            da pišem zapleteno, ruka mi drhti zbog odplitanja što mi predstoji, zbog suđenja koje 
+            otpočinjem, a sve sam ja na tom suđenju, i sudac i svjedok i tuženi.
+        </p>
+        <p>
+            Sve ću biti pošteno koliko 
+            mogu, koliko iko može, jer počinjem da sumnjam da su iskrenost i poštenje isto, iskrenost je 
+            uvjerenost da govorimo istinu (a tko u to može biti uvjeren?), a poštenja ima mnogo, i ne slažu 
+            se među sobom.
+        </p>
+    </div>
+</body>
+</html>
